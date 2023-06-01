@@ -1,0 +1,46 @@
+How to push file local to github :
+1. git init
+2. git config --global user.name "username"
+   git config --global user.email "user.email"
+   git config --global core.compression 2
+   git config --global diff.over vim.diff
+3. git add "file name" .
+4. git commit -m "first commit"
+5. git remote add origin https://github.com/PristineRamar/install-dependencies.git
+6. git remote-v
+7. git push origin master
+8. github user name (your name)
+9. github password (Tokenkey)
+===============================================================================================
+second time you want to push local to github:
+git commit -am "second commit"
+git push origin master 
+github user name (your name )
+github password (Tokenkey)
+================================================================================================
+if you see anychanges in github :
+git pull origin master 
+git user name (your name )
+git password (Tokenkey)
+====================================================================================================
+if you want code local from github:
+mkdir (Anyname)
+cd (Name)
+git clone (URL)
+github user name (your name )
+github user email (TokenKey)
+ 
+======================================================================================================
+how to create branch for pull request:
+git branch (Name)
+if you need a branch:
+git checkout (branchName)
+
+git add .
+git commit -am "any commit"
+git push origin (branch name)
+git username (your name)
+git password (Tokenkey)
+
+=====================================================================================================
+how to create 
