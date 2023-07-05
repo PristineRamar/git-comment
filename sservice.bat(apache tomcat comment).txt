@@ -1,0 +1,20 @@
+@echo off
+
+set "CATALINA_HOME=D:\Development\RiteAid\Server\Tomcat-8.5"
+set "BASE_DIR=D:\Development\RiteAid\Server\Tomcat-8.5\instances"
+
+REM Set the number of instances you want to create
+set "NUM_INSTANCES=2"
+
+REM Loop to create instances and install services
+for /L %%i in (1,1,%NUM_INSTANCES%) do (
+    set "CATALINA_BASE=%BASE_DIR%\instance%%i"
+    mkdir "%CATALINA_BASE%"
+    cd /d "%CATALINA_HOME%\bin"
+    call service.bat install TomcatInstance%%i
+    cd /d "%BASE_DIR%\instance%%i\bin"
+    call startup.bat
+)
+
+echo "Instance creation and service installation completed."
+
